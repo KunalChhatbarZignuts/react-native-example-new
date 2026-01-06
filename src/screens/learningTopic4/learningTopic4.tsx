@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import BaseScreen from '../../components/BaseScreen';
 
@@ -26,7 +26,7 @@ export default function LearningTopic4() {
   };
 
   return (
-    <BaseScreen title="Date & Time Picker">
+    <BaseScreen title="Learning Topic 3">
       <Text style={styles.label}>Selected Value</Text>
       <Text style={styles.value}>
         {date.toLocaleDateString()} | {date.toLocaleTimeString()}
@@ -44,7 +44,7 @@ export default function LearningTopic4() {
         <DateTimePicker
           value={date}
           mode={mode}
-          display="default"
+          display={Platform.OS === 'ios' ? 'inline' : 'default'}
           onChange={onChange}
         />
       )}

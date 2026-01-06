@@ -3,21 +3,39 @@ import { View, Text, FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const LEARNING_TOPICS = [
-  'Text, View, Buttons,InputText and Etc.',
+  `Ui Components \n
+   - Text,
+   - View,
+   - Button,
+   - InputText
+   - Switch
+   - CheckBox
+   - Chip
+   - Card
+   - DropDonw Menu
+   - Sliders
+  `,
   'Flexbox Layout (row, column, align, justify)',
   'Grid and List',
   'DatePicker & Time Picker',
   'Bottom Sheet and Dialogs',
+  'Tab View & Pager View',
   'Camera and Gallery Picker',
   'Form Validation',
   'Navigation (Stack & Tabs)',
-  'Memoization (useMemo, useCallback) and Custom Hooks',
+  'Memoization (useMemo, useCallback, useRef, useState) and Custom Hooks',
   'State Managemen ("Context API,Redux Toolkit,Zustand)',
   'API Integration',
   'AsyncStorage & Secure Storage',
   'Permissions Handling',
+  'WebView Integration',
+  'Theming (Dark Mode & Light Mode)',
   'Pagination & Infinite Scroll',
   'Animations (Reanimated)',
+  // 'Splash Screens (Native)'
+  // 'Firebase'
+  // 'Deep Linking & Notifications'
+  // 'Multi-Language Support'
 ];
 
 export default function IndexScreen() {
@@ -32,6 +50,8 @@ export default function IndexScreen() {
       navigation.navigate('LearningTopic3');
     } else if (index === 3) {
       navigation.navigate('LearningTopic4');
+    } else if (index === 4) {
+      navigation.navigate('LearningTopic5');
     }
   };
 
@@ -85,6 +105,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginRight: 10,
+    alignSelf: 'flex-start',
+    alignContent: 'flex-start',
     color: '#007AFF',
   },
   text: {

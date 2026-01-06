@@ -9,7 +9,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import LearningTopic1 from '../../screens/learningTopic1/LearningTopic1';
 import LearningTopic2 from '../../screens/learningTopic2/LearningTopic2';
 import LearningTopic3 from '../../screens/learningTopic3/LearningTopic3';
-import LearningTopic4 from '../../screens/learningTopic4/learningTopic4';
+import LearningTopic5 from '../../screens/learningTopic5/LearningTopic5';
+import LearningTopic4 from '../../screens/learningTopic4/LearningTopic4';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,7 @@ export default function AppNavigator() {
 
           <Stack.Screen name="LearningTopic3" component={LearningTopic3} />
           <Stack.Screen name="LearningTopic4" component={LearningTopic4} />
+          <Stack.Screen name="LearningTopic5" component={LearningTopic5} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
