@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { RouteNames } from '../services/navigation/RouteNames';
 
 const LEARNING_TOPICS = [
   `Ui Components \n
@@ -41,17 +42,21 @@ const LEARNING_TOPICS = [
 export default function IndexScreen() {
   const navigation = useNavigation<any>();
 
+  // Define the order of routes in an array
+  const TOPIC_ROUTES = [
+    RouteNames.LEARNING_TOPIC_1,
+    RouteNames.LEARNING_TOPIC_2,
+    RouteNames.LEARNING_TOPIC_3,
+    RouteNames.LEARNING_TOPIC_4,
+    RouteNames.LEARNING_TOPIC_5,
+    RouteNames.LEARNING_TOPIC_6,
+  ];
+
   const handleItemPress = (index: number) => {
-    if (index === 0) {
-      navigation.navigate('LearningTopic1');
-    } else if (index === 1) {
-      navigation.navigate('LearningTopic2');
-    } else if (index === 2) {
-      navigation.navigate('LearningTopic3');
-    } else if (index === 3) {
-      navigation.navigate('LearningTopic4');
-    } else if (index === 4) {
-      navigation.navigate('LearningTopic5');
+    const routeName = TOPIC_ROUTES[index];
+
+    if (routeName) {
+      navigation.navigate(routeName);
     }
   };
 

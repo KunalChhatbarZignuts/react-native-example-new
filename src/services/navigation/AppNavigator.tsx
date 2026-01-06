@@ -11,6 +11,8 @@ import LearningTopic2 from '../../screens/learningTopic2/LearningTopic2';
 import LearningTopic3 from '../../screens/learningTopic3/LearningTopic3';
 import LearningTopic5 from '../../screens/learningTopic5/LearningTopic5';
 import LearningTopic4 from '../../screens/learningTopic4/LearningTopic4';
+import LearningTopic6 from '../../screens/learningTopic6/learningTopic6';
+import { RouteNames } from './RouteNames';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,15 +34,31 @@ export default function AppNavigator() {
           }}
         >
           {/* The first screen defined is the one that loads on app start */}
-          <Stack.Screen name="Index" component={IndexScreen} />
-
-          <Stack.Screen name="LearningTopic1" component={LearningTopic1} />
-
-          <Stack.Screen name="LearningTopic2" component={LearningTopic2} />
-
-          <Stack.Screen name="LearningTopic3" component={LearningTopic3} />
-          <Stack.Screen name="LearningTopic4" component={LearningTopic4} />
-          <Stack.Screen name="LearningTopic5" component={LearningTopic5} />
+          <Stack.Screen name={RouteNames.INDEX} component={IndexScreen} />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_1}
+            component={LearningTopic1}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_2}
+            component={LearningTopic2}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_3}
+            component={LearningTopic3}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_4}
+            component={LearningTopic4}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_5}
+            component={LearningTopic5}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_6}
+            component={LearningTopic6}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
