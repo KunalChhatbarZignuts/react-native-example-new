@@ -7,34 +7,34 @@ const LEARNING_TOPICS = [
   `Ui Components \n
    - Text,
    - View,
-   - Button,
    - InputText
+   - Button,
    - Switch
    - CheckBox
    - Chip
    - Card
+   - Radio Button
    - DropDonw Menu
-   - Sliders
   `,
   'Flexbox Layout (row, column, align, justify)',
   'Grid and List',
   'DatePicker & Time Picker',
   'Bottom Sheet and Dialogs',
   'Tab View & Pager View',
-  'Camera and Gallery Picker',
+  'Camera, Gallery Picker & Permissions Handling',
   'Form Validation',
-  'Navigation (Stack & Tabs)',
+  'Navigation (Drawer & BottomNevBar)',
   'Memoization (useMemo, useCallback, useRef, useState) and Custom Hooks',
   'State Managemen ("Context API,Redux Toolkit,Zustand)',
   'API Integration',
   'AsyncStorage & Secure Storage',
-  'Permissions Handling',
+  'Firebase',
   'WebView Integration',
   'Theming (Dark Mode & Light Mode)',
   'Pagination & Infinite Scroll',
   'Animations (Reanimated)',
   // 'Splash Screens (Native)'
-  // 'Firebase'
+
   // 'Deep Linking & Notifications'
   // 'Multi-Language Support'
 ];
