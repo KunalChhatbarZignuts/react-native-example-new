@@ -18,11 +18,14 @@ import LearningTopic8 from '../../screens/learningTopic8/LearningTopic8';
 import LearningTopic9 from '../../screens/learningTopic9/LearningTopic9';
 import LearningTopic10 from '../../screens/learningTopic10/LearningTopic10';
 import LearningTopic11 from '../../screens/learningTopic11/LearningTopic11';
+import LearningTopic12 from '../../screens/learningTopic12/learningTopic12';
+import AddProductScreen from '../../screens/learningTopic12/components/AddProduct';
 
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigator() {
   return (
+    // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
       <NavigationContainer>
         {/* StatusBar hidden={true} removes the clock/battery bar.
@@ -83,6 +86,14 @@ export default function AppNavigator() {
           <Stack.Screen
             name={RouteNames.LEARNING_TOPIC_11}
             component={LearningTopic11}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_12}
+            component={LearningTopic12}
+          />
+          <Stack.Screen
+            name="AddProduct" // this is the route name you'll navigate to
+            component={AddProductScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

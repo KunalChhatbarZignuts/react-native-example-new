@@ -7,16 +7,14 @@ import {
   Alert,
   Modal,
 } from 'react-native';
-// import BottomSheet from '@gorhom/bottom-sheet';
-
 import BaseScreen from '../../components/BaseScreen';
 import Toast from 'react-native-toast-message';
 import ToastSimple from 'react-native-simple-toast';
-export default function LearningTopic5() {
-  // const bottomSheetRef = useRef<BottomSheet>(null);
-  // const snapPoints = useMemo(() => ['25%'], []);
-  const [modalVisible, setModalVisible] = useState(false);
+import StaticBottomSheet from '../../components/CustomBottomSheet';
 
+export default function LearningTopic5() {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [sheetVisible, setSheetVisible] = useState(false);
   const toastWithDurationHandler = () => {
     // To make Toast with duration
     ToastSimple.show('Hi I am Simple Toast', ToastSimple.SHORT);
@@ -66,12 +64,12 @@ export default function LearningTopic5() {
         </TouchableOpacity>
 
         {/* Snackbar (Simple Custom) */}
-        {/* <TouchableOpacity
-        style={styles.button}
-        onPress={() => bottomSheetRef.current?.expand()}
-      >
-        <Text style={styles.buttonText}>Open Bottom Sheet</Text>
-      </TouchableOpacity> */}
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => setSheetVisible(true)}
+        >
+          <Text style={styles.buttonText}>Open Bottom Sheet</Text>
+        </TouchableOpacity>
 
         {/* Modal */}
         <Modal transparent visible={modalVisible} animationType="fade">
@@ -87,14 +85,23 @@ export default function LearningTopic5() {
             </View>
           </View>
         </Modal>
-
-        {/* Bottom Sheet */}
-        {/* <BottomSheet ref={bottomSheetRef} index={-1} snapPoints={snapPoints}>
-          <View style={styles.sheetContent}>
-            <Text style={styles.sheetTitle}>Bottom Sheet Content</Text>
-          </View>
-        </BottomSheet> */}
       </BaseScreen>
+
+      {/* Bottom Sheet */}
+      <StaticBottomSheet visible={sheetVisible} height={250}>
+        <Text style={{ fontSize: 16 }}>This is a static bottom sheet</Text>
+        <TouchableOpacity
+          onPress={() => setSheetVisible(false)}
+          style={{
+            marginTop: 20,
+            padding: 10,
+            backgroundColor: '#1976D2',
+            borderRadius: 8,
+          }}
+        >
+          <Text style={{ color: '#fff' }}>Close</Text>
+        </TouchableOpacity>
+      </StaticBottomSheet>
       <Toast />
     </>
   );
@@ -139,9 +146,12 @@ const styles = StyleSheet.create({
   },
   sheetContent: {
     padding: 20,
+    backgroundColor: 'red',
+    alignItems: 'center',
   },
   sheetTitle: {
     fontSize: 18,
     fontWeight: '700',
+    color: '#007bff',
   },
 });

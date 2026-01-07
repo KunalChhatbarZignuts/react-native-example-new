@@ -27,13 +27,16 @@ const LEARNING_TOPICS = [
   'Memoization (useMemo, useCallback, useRef, useState) and Custom Hooks',
   'State Management ("Context API,Redux Toolkit)',
   //Zustand is pending on this state Management
-  'API Integration',
+  'API Integration with TanStack Query',
+  'API Call with Pagination',
   'AsyncStorage & Secure Storage',
   'Firebase',
   'WebView Integration',
   'Theming (Dark Mode & Light Mode)',
   'Pagination & Infinite Scroll',
   'Animations (Reanimated)',
+  'env setUp',
+  'Api call with axios',
   // passing Data one page to other with naviagtion routs
   // 'Splash Screens (Native)'
   // 'Deep Linking & Notifications'
@@ -56,6 +59,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_9,
     RouteNames.LEARNING_TOPIC_10,
     RouteNames.LEARNING_TOPIC_11,
+    RouteNames.LEARNING_TOPIC_12,
   ];
 
   const handleItemPress = (index: number) => {
