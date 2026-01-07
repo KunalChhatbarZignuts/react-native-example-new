@@ -17,6 +17,7 @@ import { RouteNames } from './RouteNames';
 import LearningTopic8 from '../../screens/learningTopic8/LearningTopic8';
 import LearningTopic9 from '../../screens/learningTopic9/LearningTopic9';
 import LearningTopic10 from '../../screens/learningTopic10/LearningTopic10';
+import LearningTopic11 from '../../screens/learningTopic11/LearningTopic11';
 
 const Stack = createNativeStackNavigator();
 
@@ -78,6 +79,10 @@ export default function AppNavigator() {
           <Stack.Screen
             name={RouteNames.LEARNING_TOPIC_10}
             component={LearningTopic10}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_11}
+            component={LearningTopic11}
           />
         </Stack.Navigator>
       </NavigationContainer>

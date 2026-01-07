@@ -69,11 +69,12 @@ export default function LearningTopic1() {
         <TouchableOpacity
           style={styles.checkboxContainer}
           onPress={() => setIsChecked(!isChecked)}
+          activeOpacity={0.7}
         >
-          <View
-            style={[styles.checkbox, isChecked && styles.checkboxChecked]}
-          />
-          <Text>Accept Terms</Text>
+          <View style={[styles.checkbox, isChecked && styles.checkboxChecked]}>
+            {isChecked && <Text style={styles.tickMark}>✓</Text>}
+          </View>
+          <Text style={styles.label}>Accept Terms</Text>
         </TouchableOpacity>
 
         <Text style={styles.title}>7️⃣ Chip</Text>
@@ -111,6 +112,7 @@ export default function LearningTopic1() {
         <Text style={styles.title}>🔟 Dropdown Menu</Text>
 
         <Dropdown
+          // eslint-disable-next-line react-native/no-inline-styles
           style={[styles.dropdown, isFocus && { borderColor: '#1976D2' }]}
           placeholderStyle={styles.placeholderStyle}
           selectedTextStyle={styles.selectedTextStyle}
@@ -131,6 +133,7 @@ export default function LearningTopic1() {
             setIsFocus(false);
           }}
           renderRightIcon={visible => (
+            // eslint-disable-next-line react-native/no-inline-styles
             <Text style={{ marginRight: 8 }}>{visible ? '▲' : '▼'}</Text>
           )}
         />
@@ -196,7 +199,18 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   checkboxChecked: {
-    backgroundColor: '#1976D2',
+    // backgroundColor: '#1976D2',
+  },
+  tickMark: {
+    color: '#1976D2',
+    fontSize: 18,
+    fontWeight: 'bold',
+    alignItems: 'center',
+    alignContent: 'center',
+    alignSelf: 'auto',
+  },
+  label: {
+    fontSize: 16,
   },
   chip: {
     alignSelf: 'flex-start',

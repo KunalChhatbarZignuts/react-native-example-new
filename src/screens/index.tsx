@@ -25,7 +25,8 @@ const LEARNING_TOPICS = [
   'Form Validation',
   'Navigation (Drawer & BottomNevBar)',
   'Memoization (useMemo, useCallback, useRef, useState) and Custom Hooks',
-  'State Managemen ("Context API,Redux Toolkit,Zustand)',
+  'State Management ("Context API,Redux Toolkit)',
+  //Zustand is pending on this state Management
   'API Integration',
   'AsyncStorage & Secure Storage',
   'Firebase',
@@ -54,6 +55,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_8,
     RouteNames.LEARNING_TOPIC_9,
     RouteNames.LEARNING_TOPIC_10,
+    RouteNames.LEARNING_TOPIC_11,
   ];
 
   const handleItemPress = (index: number) => {
