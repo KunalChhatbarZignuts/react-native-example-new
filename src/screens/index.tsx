@@ -33,6 +33,7 @@ const LEARNING_TOPICS = [
   'Theming (Dark Mode & Light Mode)',
   'Pagination & Infinite Scroll',
   'Animations (Reanimated)',
+  // passing Data one page to other with naviagtion routs
   // 'Splash Screens (Native)'
   // 'Deep Linking & Notifications'
   // 'Multi-Language Support'
@@ -51,6 +52,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_6,
     RouteNames.LEARNING_TOPIC_7,
     RouteNames.LEARNING_TOPIC_8,
+    RouteNames.LEARNING_TOPIC_9,
   ];
 
   const handleItemPress = (index: number) => {
