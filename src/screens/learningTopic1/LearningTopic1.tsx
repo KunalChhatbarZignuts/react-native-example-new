@@ -130,7 +130,9 @@ export default function LearningTopic1() {
             setDropdownValue(item.value);
             setIsFocus(false);
           }}
-          renderRightIcon={() => <Text style={{ marginRight: 8 }}>🔽</Text>}
+          renderRightIcon={visible => (
+            <Text style={{ marginRight: 8 }}>{visible ? '▲' : '▼'}</Text>
+          )}
         />
 
         <Text style={styles.description}>

@@ -38,7 +38,7 @@ export default function LearningTopic6() {
   });
 
   return (
-    <BaseScreen title="React Native Tab View">
+    <BaseScreen title="Learning Topic 6">
       <TabView
         navigationState={{ index, routes }}
         renderScene={renderScene}

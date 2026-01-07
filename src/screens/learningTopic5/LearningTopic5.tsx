@@ -23,7 +23,7 @@ export default function LearningTopic5() {
   };
   return (
     <>
-      <BaseScreen title="Learning Topic 3">
+      <BaseScreen title="Learning Topic 5">
         {/* Alert Dialog */}
         <TouchableOpacity
           style={styles.button}

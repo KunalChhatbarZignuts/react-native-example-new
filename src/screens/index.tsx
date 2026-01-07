@@ -34,7 +34,6 @@ const LEARNING_TOPICS = [
   'Pagination & Infinite Scroll',
   'Animations (Reanimated)',
   // 'Splash Screens (Native)'
-
   // 'Deep Linking & Notifications'
   // 'Multi-Language Support'
 ];
@@ -50,6 +49,8 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_4,
     RouteNames.LEARNING_TOPIC_5,
     RouteNames.LEARNING_TOPIC_6,
+    RouteNames.LEARNING_TOPIC_7,
+    RouteNames.LEARNING_TOPIC_8,
   ];
 
   const handleItemPress = (index: number) => {

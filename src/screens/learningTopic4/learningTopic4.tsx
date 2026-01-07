@@ -26,7 +26,7 @@ export default function LearningTopic4() {
   };
 
   return (
-    <BaseScreen title="Learning Topic 3">
+    <BaseScreen title="Learning Topic 4">
       <Text style={styles.label}>Selected Value</Text>
       <Text style={styles.value}>
         {date.toLocaleDateString()} | {date.toLocaleTimeString()}
