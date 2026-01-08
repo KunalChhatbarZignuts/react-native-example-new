@@ -28,19 +28,17 @@ const LEARNING_TOPICS = [
   'State Management ("Context API,Redux Toolkit)',
   //Zustand is pending on this state Management
   'API Integration with TanStack Query',
-  'API Call with Pagination',
   'AsyncStorage & Secure Storage',
   'Firebase',
-  'WebView Integration',
-  'Theming (Dark Mode & Light Mode)',
-  'Pagination & Infinite Scroll',
-  'Animations (Reanimated)',
   'env setUp',
+  'Pagination & Infinite Scroll',
+  'WebView Integration and Push Notification(Local notification)',
+  'Theming (Dark Mode & Light Mode)',
+  'Multi-Language Support',
   'Api call with axios',
-  // passing Data one page to other with naviagtion routs
+  'Deep Linking',
+  'Animations (Reanimated)',
   // 'Splash Screens (Native)'
-  // 'Deep Linking & Notifications'
-  // 'Multi-Language Support'
 ];
 
 export default function IndexScreen() {
@@ -60,6 +58,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_10,
     RouteNames.LEARNING_TOPIC_11,
     RouteNames.LEARNING_TOPIC_12,
+    RouteNames.LEARNING_TOPIC_13,
   ];
 
   const handleItemPress = (index: number) => {

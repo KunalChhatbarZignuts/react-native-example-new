@@ -18,8 +18,9 @@ import LearningTopic8 from '../../screens/learningTopic8/LearningTopic8';
 import LearningTopic9 from '../../screens/learningTopic9/LearningTopic9';
 import LearningTopic10 from '../../screens/learningTopic10/LearningTopic10';
 import LearningTopic11 from '../../screens/learningTopic11/LearningTopic11';
-import LearningTopic12 from '../../screens/learningTopic12/learningTopic12';
 import AddProductScreen from '../../screens/learningTopic12/components/AddProduct';
+import LearningTopic12 from '../../screens/learningTopic12/LearningTopic12';
+import LearningTopic13 from '../../screens/learningTopic13/LearningTopic13';
 
 const Stack = createNativeStackNavigator();
 
@@ -94,6 +95,10 @@ export default function AppNavigator() {
           <Stack.Screen
             name="AddProduct" // this is the route name you'll navigate to
             component={AddProductScreen}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_13}
+            component={LearningTopic13}
           />
         </Stack.Navigator>
       </NavigationContainer>
