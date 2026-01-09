@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { QUERY_KEYS } from './queryKeys';
+import { QUERY_KEYS } from '../queryKeys';
 import { createProduct, getProducts } from '../productApi';
 
 // GET products

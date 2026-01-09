@@ -1,3 +1,7 @@
+import { API_URL } from '@env';
+import { PROUDUCT_API_URI } from '@env';
 export const ENDPOINTS = {
-  PRODUCTS: 'https://fakestoreapi.com/products',
+  //  'https://fakestoreapi.com/products',
+  PRODUCTS: `${PROUDUCT_API_URI}/products`,
+  POSTS: `${API_URL}/posts`,
 };

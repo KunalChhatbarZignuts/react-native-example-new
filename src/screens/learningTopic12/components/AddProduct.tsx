@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Alert } from 'react-native';
-import { useCreateProduct } from '../../../services/api/queries/productQueries';
+import { useCreateProduct } from '../../../services/api/queriesHooks/productQueries';
 import BaseScreen from '../../../components/BaseScreen';
 import AppLoader from '../../../components/AppLoader';
 

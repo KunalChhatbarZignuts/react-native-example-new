@@ -28,16 +28,18 @@ const LEARNING_TOPICS = [
   'State Management ("Context API,Redux Toolkit)',
   //Zustand is pending on this state Management
   'API Integration with TanStack Query',
+  //  'Api call with axios',
   'AsyncStorage & Secure Storage',
-  'Firebase',
-  'env setUp',
+  'env setUp & Firebase',
+  'OAuth login (Apple and Google)',
   'Pagination & Infinite Scroll',
   'WebView Integration and Push Notification(Local notification)',
-  'Theming (Dark Mode & Light Mode)',
   'Multi-Language Support',
-  'Api call with axios',
+  'Theming (Dark Mode & Light Mode)',
   'Deep Linking',
-  'Animations (Reanimated)',
+  // 'Zustand state management',
+  // 'Animations (Reanimated)',
+  // 'Configure Reactotron',
   // 'Splash Screens (Native)'
 ];
 
@@ -59,6 +61,9 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_11,
     RouteNames.LEARNING_TOPIC_12,
     RouteNames.LEARNING_TOPIC_13,
+    RouteNames.LEARNING_TOPIC_14,
+    RouteNames.LEARNING_TOPIC_15,
+    RouteNames.LEARNING_TOPIC_16,
   ];
 
   const handleItemPress = (index: number) => {

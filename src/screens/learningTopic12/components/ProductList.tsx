@@ -7,7 +7,7 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from 'react-native';
-import { useProducts } from '../../../services/api/queries/productQueries';
+import { useProducts } from '../../../services/api/queriesHooks/productQueries';
 
 export default function ProductListScreen() {
   const { data, isLoading, error, refetch } = useProducts();
