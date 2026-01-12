@@ -15,13 +15,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { getApps } from '@react-native-firebase/app';
-import { API_URL } from '@env';
+// import { API_URL } from '@env';
 import { ThemeProvider } from './src/context/ThemeProvider';
 const queryClient = new QueryClient();
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
-  console.log('Api Uirl :', API_URL);
+  console.log('Api Uirl :', 'API_URL');
   useEffect(() => {
     console.log('Firebase apps:', getApps().length);
   }, []);

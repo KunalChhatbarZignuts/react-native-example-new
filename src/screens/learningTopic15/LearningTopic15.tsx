@@ -8,11 +8,11 @@ import { Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import appleAuth from '@invertase/react-native-apple-authentication';
-import { WEB_CLIENT_ID_FROM_FIREBASE } from '@env';
 import BaseScreen from '../../components/BaseScreen';
 
 GoogleSignin.configure({
-  webClientId: WEB_CLIENT_ID_FROM_FIREBASE,
+  webClientId:
+    '352083822274-rffad8b7v2euf4ut9p5qp70mkkm1bq00.apps.googleusercontent.com',
   offlineAccess: true,
 });
 

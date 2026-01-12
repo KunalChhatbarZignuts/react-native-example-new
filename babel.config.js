@@ -1,7 +1,5 @@
 /** @type {import('react-native-worklets/plugin').PluginOptions} */
-const workletsPluginOptions = {
-  // your custom options (optional)
-};
+const workletsPluginOptions = {};
 
 module.exports = {
   presets: ['module:@react-native/babel-preset'],
@@ -11,10 +9,12 @@ module.exports = {
       {
         moduleName: '@env',
         path: '.env',
+        safe: false,
         allowUndefined: false,
       },
     ],
 
+    // 🚨 MUST be last
     ['react-native-worklets/plugin', workletsPluginOptions],
   ],
 };
