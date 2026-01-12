@@ -66,6 +66,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_16,
     RouteNames.LEARNING_TOPIC_17,
     RouteNames.LEARNING_TOPIC_18,
+    RouteNames.LEARNING_TOPIC_19,
   ];
 
   const handleItemPress = (index: number) => {
