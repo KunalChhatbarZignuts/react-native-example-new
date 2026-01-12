@@ -4,7 +4,7 @@ import React_RCTAppDelegate
 import ReactAppDependencyProvider
 import Firebase
 import GoogleSignIn
-
+import GoogleMaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     // Add me --- \/
     FirebaseApp.configure()
+        // Google Maps API KEY (HERE)
+    GMSServices.provideAPIKey("YOUR_GOOGLE_MAP_API_KEY")
     // Add me --- /\
     // ...
     let delegate = ReactNativeDelegate()

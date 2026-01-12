@@ -38,6 +38,8 @@ const LEARNING_TOPICS = [
   'Multi-Language Support',
   'Deep Linking with CLI',
   'Theming (Dark Mode & Light Mode)',
+  'Google map with geolocation',
+  'Pick File from Storage',
   // 'Zustand state management',
   // 'Animations (Reanimated)',
   // 'Configure Reactotron',
@@ -69,6 +71,8 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_19,
     RouteNames.LEARNING_TOPIC_20,
     RouteNames.LEARNING_TOPIC_21,
+    RouteNames.LEARNING_TOPIC_22,
+    RouteNames.LEARNING_TOPIC_23,
   ];
 
   const handleItemPress = (index: number) => {

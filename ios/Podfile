@@ -27,6 +27,7 @@ target 'example' do
     :hermes_enabled => true,
     :fabric_enabled => true
   )
+    pod 'GoogleMaps'
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   pod 'gRPC-Core', :modular_headers => true
   pod 'FirebaseCoreInternal', :modular_headers => true
