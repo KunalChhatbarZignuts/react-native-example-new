@@ -36,8 +36,8 @@ const LEARNING_TOPICS = [
   'Push Notification(Local notification)',
   'WebView Integration ',
   'Multi-Language Support',
+  'Deep Linking with CLI',
   'Theming (Dark Mode & Light Mode)',
-  'Deep Linking',
   // 'Zustand state management',
   // 'Animations (Reanimated)',
   // 'Configure Reactotron',
@@ -67,6 +67,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_17,
     RouteNames.LEARNING_TOPIC_18,
     RouteNames.LEARNING_TOPIC_19,
+    RouteNames.LEARNING_TOPIC_20,
   ];
 
   const handleItemPress = (index: number) => {

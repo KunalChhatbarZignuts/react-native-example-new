@@ -43,7 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       open url: URL,
       options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
-      return GIDSignIn.sharedInstance.handle(url)
+        // 1. Handle Google Sign-In
+    if GIDSignIn.sharedInstance.handle(url) {
+      return true
+    }
+
+    // 2. Handle React Native deep linking
+    if RCTLinkingManager.application(app, open: url, options: options) {
+      return true
+    }
+
+    return false
+
     }
 }
 

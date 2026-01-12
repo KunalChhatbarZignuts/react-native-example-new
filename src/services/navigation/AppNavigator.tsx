@@ -27,6 +27,8 @@ import LearningTopic16 from '../../screens/learningTopic16/LearningTopic16';
 import LearningTopic17 from '../../screens/learningTopic17/LearningTopic17';
 import LearningTopic18 from '../../screens/learningTopic18/LearningTopic18';
 import LearningTopic19 from '../../screens/learningTopic19/LearningTopic19';
+import { linking } from './linking';
+import LearningTopic20 from '../../screens/learningTopic20/LearningTopic20';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,7 +36,7 @@ export default function AppNavigator() {
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
-      <NavigationContainer>
+      <NavigationContainer linking={linking}>
         {/* StatusBar hidden={true} removes the clock/battery bar.
         If you still see a 'gap', check LearningTopic1 for SafeAreaView padding.
       */}
@@ -129,6 +131,10 @@ export default function AppNavigator() {
           <Stack.Screen
             name={RouteNames.LEARNING_TOPIC_19}
             component={LearningTopic19}
+          />
+          <Stack.Screen
+            name={RouteNames.LEARNING_TOPIC_20}
+            component={LearningTopic20}
           />
         </Stack.Navigator>
       </NavigationContainer>
