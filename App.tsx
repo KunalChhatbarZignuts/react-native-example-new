@@ -16,6 +16,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { getApps } from '@react-native-firebase/app';
 import { API_URL } from '@env';
+import { ThemeProvider } from './src/context/ThemeProvider';
 const queryClient = new QueryClient();
 
 function App() {
@@ -26,19 +27,21 @@ function App() {
   }, []);
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <BottomSheetModalProvider>
-        <SafeAreaProvider>
-          <QueryClientProvider client={queryClient}>
-            <StatusBar
-              barStyle={!isDarkMode ? 'light-content' : 'dark-content'}
-            />
-            <AppNavigator />
-            <Toast />
-          </QueryClientProvider>
-        </SafeAreaProvider>
-      </BottomSheetModalProvider>
-    </GestureHandlerRootView>
+    <ThemeProvider>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <BottomSheetModalProvider>
+          <SafeAreaProvider>
+            <QueryClientProvider client={queryClient}>
+              <StatusBar
+                barStyle={!isDarkMode ? 'light-content' : 'dark-content'}
+              />
+              <AppNavigator />
+              <Toast />
+            </QueryClientProvider>
+          </SafeAreaProvider>
+        </BottomSheetModalProvider>
+      </GestureHandlerRootView>
+    </ThemeProvider>
   );
 }
 

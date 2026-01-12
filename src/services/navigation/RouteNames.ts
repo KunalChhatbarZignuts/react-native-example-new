@@ -22,4 +22,5 @@ export const RouteNames = {
   LEARNING_TOPIC_18: 'LearningTopic18',
   LEARNING_TOPIC_19: 'LearningTopic19',
   LEARNING_TOPIC_20: 'LearningTopic20',
+  LEARNING_TOPIC_21: 'LearningTopic21',
 } as const;
