@@ -1,7 +1,5 @@
 /** @type {import('react-native-worklets/plugin').PluginOptions} */
-const workletsPluginOptions = {
-  // your custom options (optional)
-};
+const workletsPluginOptions = {};
 
 module.exports = {
   presets: ['module:@react-native/babel-preset'],
@@ -15,6 +13,18 @@ module.exports = {
       },
     ],
 
+    // ✅ Tamagui Babel Plugin (MUST be before worklets)
+    [
+      '@tamagui/babel-plugin',
+      {
+        components: ['tamagui'],
+        config: './tamagui.config.ts',
+        logTimings: true,
+        disableExtraction: process.env.NODE_ENV === 'development',
+      },
+    ],
+
+    // ✅ Keep this LAST
     ['react-native-worklets/plugin', workletsPluginOptions],
   ],
 };

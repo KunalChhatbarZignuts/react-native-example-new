@@ -26,7 +26,6 @@ const LEARNING_TOPICS = [
   'Navigation (Drawer & BottomNevBar)',
   'Memoization (useMemo, useCallback, useRef, useState) and Custom Hooks',
   'State Management ("Context API,Redux Toolkit)',
-  //Zustand state Management
   'API Integration with TanStack Query',
   //  'Api call with axios',
   'AsyncStorage & Secure Storage',
@@ -40,6 +39,7 @@ const LEARNING_TOPICS = [
   'Theming (Dark Mode & Light Mode)',
   'Google map with geolocation',
   'Pick File from Storage',
+  'Tamag Ui',
   // 'Zustand state management',
   // 'Animations (Reanimated)',
   // 'Configure Reactotron',
@@ -73,6 +73,7 @@ export default function IndexScreen() {
     RouteNames.LEARNING_TOPIC_21,
     RouteNames.LEARNING_TOPIC_22,
     RouteNames.LEARNING_TOPIC_23,
+    RouteNames.LEARNING_TOPIC_24,
   ];
 
   const handleItemPress = (index: number) => {

@@ -1,10 +1,17 @@
 {
   "extends": "@react-native/typescript-config",
   "compilerOptions": {
-    "types": ["jest", "react", "react-native", "node"],
+    "types": ["jest", "react", "react-native", "node", "tamagui"],
     "allowSyntheticDefaultImports": true,
+    "strict": true,
     "jsx": "react-native"
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/types", "env.d.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/types",
+    "env.d.ts",
+    "tamagui.config.tsx"
+  ],
   "exclude": ["**/node_modules", "**/Pods"]
 }

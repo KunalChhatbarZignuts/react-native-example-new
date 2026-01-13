@@ -69,6 +69,8 @@ export default function LearningTopic22() {
           <ActivityIndicator size="large" />
         ) : (
           <MapView
+            // you can change this provider base on requirements
+            //  provider={Platform.OS === 'ios' ? 'google' : undefined} // Add this
             style={styles.map}
             showsUserLocation
             initialRegion={{
