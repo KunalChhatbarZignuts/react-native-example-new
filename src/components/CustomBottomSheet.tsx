@@ -1,29 +1,45 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Modal, Pressable } from 'react-native';
 
 interface StaticBottomSheetProps {
   visible: boolean;
   height?: number;
+  onClose: () => void;
   children?: React.ReactNode;
 }
 
 const StaticBottomSheet: React.FC<StaticBottomSheetProps> = ({
   visible,
   height = 250,
+  onClose,
   children,
 }) => {
-  if (!visible) return null;
-
   return (
-    <View style={[styles.container, { height }]}>
-      {children || <Text style={styles.sheetTitle}>Bottom Sheet Content</Text>}
-    </View>
+    <Modal
+      visible={visible}
+      transparent
+      animationType="slide"
+      onRequestClose={onClose}
+    >
+      {/* Backdrop */}
+      <Pressable style={styles.backdrop} onPress={onClose} />
+
+      {/* Bottom Sheet */}
+      <View style={[styles.container, { height }]}>
+        {children || (
+          <Text style={styles.sheetTitle}>Bottom Sheet Content</Text>
+        )}
+      </View>
+    </Modal>
   );
 };
 
 export default StaticBottomSheet;
-
 const styles = StyleSheet.create({
+  backdrop: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.4)',
+  },
   container: {
     position: 'absolute',
     bottom: 0,
@@ -34,8 +50,10 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    elevation: 10, // Android shadow
-    shadowColor: '#000', // iOS shadow
+
+    // Shadow
+    elevation: 10,
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: -3 },
     shadowOpacity: 0.1,
     shadowRadius: 4,

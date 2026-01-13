@@ -89,7 +89,11 @@ export default function LearningTopic5() {
       </BaseScreen>
 
       {/* Bottom Sheet */}
-      <StaticBottomSheet visible={sheetVisible} height={250}>
+      <StaticBottomSheet
+        visible={sheetVisible}
+        height={250}
+        onClose={function (): void {}}
+      >
         <Text style={{ fontSize: 16 }}>This is a static bottom sheet</Text>
         <TouchableOpacity
           onPress={() => setSheetVisible(false)}
