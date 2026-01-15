@@ -40,7 +40,7 @@ const LEARNING_TOPICS = [
   'Google map with geolocation',
   'Pick File from Storage',
   'Tamag Ui',
-  // 'Zustand state management',
+  'Zustand state management',
   // 'Animations (Reanimated)',
   // 'Configure Reactotron',
 ];

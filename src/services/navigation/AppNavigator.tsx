@@ -33,8 +33,10 @@ import LearningTopic21 from '../../screens/learningTopic21/LearningTopic21';
 import LearningTopic22 from '../../screens/learningTopic22/LearningTopic22';
 import LearningTopic23 from '../../screens/learningTopic23/LearningTopic23';
 import LearningTopic24 from '../../screens/learningTopic24/LearningTopic24';
+import TamaguUI from '../../screens/learningTopic24/Tamagui';
+import { RootStackParamList } from './RootStackParamList';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function AppNavigator() {
   return (
@@ -156,6 +158,7 @@ export default function AppNavigator() {
             name={RouteNames.LEARNING_TOPIC_24}
             component={LearningTopic24}
           />
+          <Stack.Screen name={RouteNames.TAMAGUI_UI} component={TamaguUI} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

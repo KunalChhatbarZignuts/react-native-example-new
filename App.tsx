@@ -11,6 +11,7 @@ import { getApps } from '@react-native-firebase/app';
 import AppNavigator from './src/services/navigation/AppNavigator';
 import { ThemeProvider } from './src/context/ThemeProvider';
 import tamaguiConfig from './tamagui.config';
+import { PortalProvider } from 'tamagui';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,24 +34,26 @@ function App() {
 
   return (
     <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
-      <ThemeProvider>
-        <QueryClientProvider client={queryClient}>
-          <GestureHandlerRootView style={{ flex: 1 }}>
-            <BottomSheetModalProvider>
-              <SafeAreaProvider>
-                <StatusBar
-                  // Logic: If dark mode, use light text. If light mode, use dark text.
-                  barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-                  backgroundColor="transparent"
-                  translucent
-                />
-                <AppNavigator />
-                <Toast />
-              </SafeAreaProvider>
-            </BottomSheetModalProvider>
-          </GestureHandlerRootView>
-        </QueryClientProvider>
-      </ThemeProvider>
+      <PortalProvider shouldAddRootHost>
+        <ThemeProvider>
+          <QueryClientProvider client={queryClient}>
+            <GestureHandlerRootView style={{ flex: 1 }}>
+              <BottomSheetModalProvider>
+                <SafeAreaProvider>
+                  <StatusBar
+                    // Logic: If dark mode, use light text. If light mode, use dark text.
+                    barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+                    backgroundColor="transparent"
+                    translucent
+                  />
+                  <AppNavigator />
+                  <Toast />
+                </SafeAreaProvider>
+              </BottomSheetModalProvider>
+            </GestureHandlerRootView>
+          </QueryClientProvider>
+        </ThemeProvider>
+      </PortalProvider>
     </TamaguiProvider>
   );
 }

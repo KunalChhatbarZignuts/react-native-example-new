@@ -26,4 +26,5 @@ export const RouteNames = {
   LEARNING_TOPIC_22: 'LearningTopic22',
   LEARNING_TOPIC_23: 'LearningTopic23',
   LEARNING_TOPIC_24: 'LearningTopic24',
+  TAMAGUI_UI: 'TAMAGUI_UI',
 } as const;
