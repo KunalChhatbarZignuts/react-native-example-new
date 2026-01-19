@@ -35,4 +35,5 @@ export type RootStackParamList = {
     userEmail: string;
     password: string;
   };
+  [RouteNames.LEARNING_TOPIC_25]: undefined;
 };
