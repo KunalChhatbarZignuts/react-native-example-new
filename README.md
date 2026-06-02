@@ -204,3 +204,6 @@ This repository is designed to:
 - Provide **hands-on examples** for common React Native problems
 
 Happy Coding 🚀
+
+- https://youtu.be/U2Hg-MAAz_M
+- https://youtu.be/MrhbtI4LP-8?t=39

@@ -35,6 +35,7 @@
     "@tamagui/animations-react-native": "^1.144.1",
     "@tamagui/config": "^1.144.1",
     "@tamagui/core": "^1.144.1",
+    "@tamagui/lucide-icons": "^1.144.1",
     "@tamagui/themes": "^1.144.1",
     "@tamagui/web": "^1.144.1",
     "@tanstack/react-query": "^5.90.16",

@@ -35,7 +35,7 @@ import LearningTopic23 from '../../screens/learningTopic23/LearningTopic23';
 import LearningTopic24 from '../../screens/learningTopic24/LearningTopic24';
 import TamaguUI from '../../screens/learningTopic24/Tamagui';
 import { RootStackParamList } from './RootStackParamList';
-import LearningTopic25 from '../../screens/learningTopic25/LearningTopic25';
+import SimpleTodoScreen from '../../screens/todo/SimpleTodoScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -162,7 +162,7 @@ export default function AppNavigator() {
           <Stack.Screen name={RouteNames.TAMAGUI_UI} component={TamaguUI} />
           <Stack.Screen
             name={RouteNames.LEARNING_TOPIC_25}
-            component={LearningTopic25}
+            component={SimpleTodoScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
